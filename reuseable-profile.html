@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Team Profiles</title>
+
+    <style>
+      /*
+          SPACING SYSTEM (px)
+          2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+          FONT SIZE SYSTEM (px)
+          10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+          */
+
+      /*
+          Main color:#087f5b;
+          Grey color:#343a40;
+          */
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+      }
+
+      header,
+      footer {
+        background-color: #222;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      .grid-container {
+        display: grid;
+        gap: 1.5rem;
+        padding: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+
+      .card {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+
+      }
+
+      .card img {
+        width: 100%;
+        display: block;
+      }
+
+      .card-info {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: 0.2s ease;
+      }
+
+      .bttn {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+
+        background-color: rgba(103, 97, 97, 0.268);
+      }
+
+      @media (max-width: 600px) {
+        .grid-container {
+          padding: 1rem;
+        }
+        header h1 {
+          font-size: 1.6rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Meet our team</h1>
+    </header>
+    <main class="grid-container">
+      <!-- cards will go here -->
+
+      <div class="card">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/018/765/757/original/user-profile-icon-in-flat-style-member-avatar-illustration-on-isolated-background-human-permission-sign-business-concept-vector.jpg"
+          alt="Profile Picture"
+        />
+        <div class="card-info">
+          <h2>Jane Doe</h2>
+          <p>Frontend Developer</p>
+        </div>
+        <div class="bttn">
+          <button>Contact</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/018/765/757/original/user-profile-icon-in-flat-style-member-avatar-illustration-on-isolated-background-human-permission-sign-business-concept-vector.jpg"
+          alt="Profile Picture"
+        />
+        <div class="card-info">
+          <h2>John Smith</h2>
+          <p>Backend Developer</p>
+        </div>
+        <div class="bttn">
+          <button>Contact</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/018/765/757/original/user-profile-icon-in-flat-style-member-avatar-illustration-on-isolated-background-human-permission-sign-business-concept-vector.jpg"
+          alt="Profile Picture"
+        />
+        <div class="card-info">
+          <h2>Mary Johnson</h2>
+          <p>UI/UX Designer</p>
+        </div>
+        <div class="bttn">
+          <button>Contact</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Web dev students</p>
+    </footer>
+  </body>
+</html>
